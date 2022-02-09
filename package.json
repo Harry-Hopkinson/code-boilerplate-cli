@@ -1,8 +1,9 @@
 {
-  "name": "code-boilerplate-cli",
+  "name": "code-boilerplate",
   "version": "1.0.0",
   "description": "A Command Line Interface version of the Code Boilerplate Extension. Generates a sample Hello World file based on the chosen language.",
-  "main": "index.js",
+  "main": "index.ts",
+  "bin": "index.ts",
   "dependencies": {
     "fs": "^0.0.1-security",
     "inquirer": "^8.2.0",

@@ -24,4 +24,10 @@ const configFolderPath = path.resolve(__dirname, "config")
     ]);
 
     var config = await readFile(configFiles[file].catch(console.log));
+
+    if (file == "c") {
+        const cFile = {
+            
+        }
+    }
 })
