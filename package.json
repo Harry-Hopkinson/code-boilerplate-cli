@@ -1,0 +1,24 @@
+{
+  "name": "code-boilerplate-cli",
+  "version": "1.0.0",
+  "description": "A Command Line Interface version of the Code Boilerplate Extension. Generates a sample Hello World file based on the chosen language.",
+  "main": "index.js",
+  "dependencies": {
+    "typescript": "^4.5.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harry-Hopkinson/code-boilerplate-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Harry-Hopkinson/code-boilerplate-cli/issues"
+  },
+  "homepage": "https://github.com/Harry-Hopkinson/code-boilerplate-cli#readme"
+}
