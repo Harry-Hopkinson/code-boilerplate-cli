@@ -7,8 +7,8 @@ const fs = require("fs");
 const configFiles : any = {};
 const configFolderPath = path.resolve(__dirname, "config")
 
-const files = readdir(configFolderPath).catch(console.log);
-for (var i of files) {
+const files : any = readdir(configFolderPath).catch(console.log);
+for (var i of Object.keys(files)) {
     const fileName = i.split(".")[1];
     configFiles[fileName] = path.join(configFolderPath, i);
 }
