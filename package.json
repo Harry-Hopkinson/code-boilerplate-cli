@@ -17,9 +17,25 @@
     "type": "git",
     "url": "git+https://github.com/Harry-Hopkinson/code-boilerplate-cli.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "code-boilerplate",
+    "cli",
+    "command-line",
+    "extension",
+    "generator",
+    "hello-world",
+    "language",
+    "sample",
+    "typescript",
+    "c#",
+    "c",
+    "golang",
+    "python",
+    "html",
+    "java"
+  ],
+  "author": "harry-hopkinson",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Harry-Hopkinson/code-boilerplate-cli/issues"
   },
