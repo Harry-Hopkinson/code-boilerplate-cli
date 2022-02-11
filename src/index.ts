@@ -66,6 +66,52 @@ const configFolderPath = path.resolve(__dirname, "config");
 				process.exit();
 			}
 		);
+	} else if (language == "java") {
+		let javaConfig = await readFile(configFiles[language]).catch(
+			console.log
+		);
+		const javaFolderPath = path.join(process.cwd(), "java.java");
+		await writeFile(javaFolderPath, javaConfig.toString()).catch(
+			(err: any) => {
+				console.log(err);
+				process.exit();
+			}
+		);
+	} else if (language == "js") {
+		let javaScriptConfig = await readFile(configFiles[language]).catch(
+			console.log
+		);
+		const javaScriptFolderPath = path.join(process.cwd(), "javascript.js");
+		await writeFile(
+			javaScriptFolderPath,
+			javaScriptConfig.toString()
+		).catch((err: any) => {
+			console.log(err);
+			process.exit();
+		});
+	} else if (language == "py") {
+		let pythonConfig = await readFile(configFiles[language]).catch(
+			console.log
+		);
+		const pythonFolderPath = path.join(process.cwd(), "python.py");
+		await writeFile(pythonFolderPath, pythonConfig.toString()).catch(
+			(err: any) => {
+				console.log(err);
+				process.exit();
+			}
+		);
+	} else if (language == "ts") {
+		let typescriptConfig = await readFile(configFiles[language]).catch(
+			console.log
+		);
+		const typescriptFolderPath = path.join(process.cwd(), "typescript.ts");
+		await writeFile(
+			typescriptFolderPath,
+			typescriptConfig.toString()
+		).catch((err: any) => {
+			console.log(err);
+			process.exit();
+		});
 	}
 	console.log("Code Boilerplate generated for the ", language, " language");
 })();
