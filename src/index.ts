@@ -35,7 +35,7 @@ const configFolderPath = path.resolve(__dirname, 'config');
   }
   else if (language == "cc") {
     let cppConfig = await readFile(configFiles[language]).catch(console.log);
-    const cppFolderPath = path.join(process.cwd(), 'cpp.cc');
+    const cppFolderPath = path.join(process.cwd(), 'c++.cc');
     await writeFile(cppFolderPath, cppConfig.toString()).catch((err: any)=> {
         console.log(err);
         process.exit();
@@ -43,11 +43,22 @@ const configFolderPath = path.resolve(__dirname, 'config');
   }
   else if (language == "cs") {
     let csConfig = await readFile(configFiles[language]).catch(console.log);
-    const csFolderPath = path.join(process.cwd(), 'cpp.cc');
+    const csFolderPath = path.join(process.cwd(), 'c#.cs');
     await writeFile(csFolderPath, csConfig.toString()).catch((err: any)=> {
         console.log(err);
         process.exit();
     });
+  }
+  else if (language == "go") {
+    let goConfig = await readFile(configFiles[language]).catch(console.log);
+    const goFolderPath = path.join(process.cwd(), 'golang.go');
+    await writeFile(goFolderPath, goConfig.toString()).catch((err: any)=> {
+        console.log(err);
+        process.exit();
+    });
+  }
+  else if (language == "html") {
+    
   }
   console.log("Code Boilerplate generated for the ", language, " language");
 })();
