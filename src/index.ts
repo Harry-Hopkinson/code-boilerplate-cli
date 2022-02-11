@@ -41,5 +41,13 @@ const configFolderPath = path.resolve(__dirname, 'config');
         process.exit();
     });
   }
+  else if (language == "cs") {
+    let csConfig = await readFile(configFiles[language]).catch(console.log);
+    const csFolderPath = path.join(process.cwd(), 'cpp.cc');
+    await writeFile(csFolderPath, csConfig.toString()).catch((err: any)=> {
+        console.log(err);
+        process.exit();
+    });
+  }
   console.log("Code Boilerplate generated for the ", language, " language");
 })();
