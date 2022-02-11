@@ -58,7 +58,12 @@ const configFolderPath = path.resolve(__dirname, 'config');
     });
   }
   else if (language == "html") {
-    
+    let htmlConfig = await readFile(configFiles[language]).catch(console.log);
+    const htmlFolderPath = path.join(process.cwd(), 'html.html');
+    await writeFile(htmlFolderPath, htmlConfig.toString()).catch((err: any)=> {
+        console.log(err);
+        process.exit();
+    });
   }
   console.log("Code Boilerplate generated for the ", language, " language");
 })();
