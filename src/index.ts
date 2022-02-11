@@ -8,17 +8,27 @@ const configFiles : any = {};
 const configFolderPath = path.resolve(__dirname, "config")
 
 const files : any = readdir(configFolderPath).catch(console.log);
-for (var i of Object.keys(files)) {
-    const fileName = i.split(".")[1];
-    configFiles[fileName] = path.join(configFolderPath, i);
+for (const file of files) {
+    configFiles[file] = readFile(path.resolve(configFolderPath, file)).catch(console.log);
 }
+
+configFiles.then(() => {
+    inquirer.prompt([
+        {
+            type: "list",
+            name: "config",
+            message: "Select a config file",
+            choices: Object.keys(configFiles)
+        }
+    ])
+})
 
 const { file } =  inquirer.prompt([
     {
         type: "list",
         message: "What Code Boilerplate do you want to generate?",
         name: "file",
-        choices: Object.keys(configFiles),
+        choices: Object.keys(configFiles)
     }
 ]);
 
