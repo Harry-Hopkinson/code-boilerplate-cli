@@ -1,6 +1,6 @@
 # code-boilerplate-cli
 
-A Command Line Interface version of the [Code Boilerplate Extension](https://github.com/Harry-Hopkinson/code-boilerplate). Generates a sample Hello World file based on the chosen language.
+A Command Line Interface version of the [Code Boilerplate Extension.](https://github.com/Harry-Hopkinson/code-boilerplate) Generates a sample Hello World file based on the chosen language.
 
 ## How to Run
 
